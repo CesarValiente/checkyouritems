@@ -15,37 +15,50 @@
 
     You should have received a copy of the GNU General Public License
     along with CheckYourItems.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
-
-package org.comunes.checkyouritems.components.notifications;
-
-import org.comunes.checkyouritems.application.Settings;
+package org.comunes.checkyouritems.managers;
 
 import android.content.Context;
+import android.widget.Toast;
 
 /**
  * 
  * @author Cesar Valiente Gordo (cesar.valiente@gmail.com)
  * 
- * Class to show {@link android.widget.Toast} notifications
+ *         Class to show {@link android.widget.Toast} notifications
  */
-public class Toast {
-	
-	/**
-	 * Launches a {@link android.widget.Toast} notification
-	 * 
-	 * @param context
-	 * @param message
-	 * @param length
-	 */
-	public static void r(Context context, String message, int length) {
-		
-		if (Settings.Development.DEBUG)
-			android.widget.Toast.makeText(
-				context,
-				message,
-				length).show();
-	}
-	
+public class NotificationManager {
+
+    /**
+     * Launches a {@link Toast} notification
+     * 
+     * @param context
+     * @param message
+     * @param length
+     */
+    public static void showToast(Context context, String message, int length) {
+
+        Toast.makeText(context, message, length).show();
+    }
+
+    /**
+     * Shows a short time {@link Toast}
+     * 
+     * @param context
+     * @param message
+     */
+    public static void showShortTimeToast(Context context, String message) {
+        showToast(context, message, Toast.LENGTH_SHORT);
+    }
+
+    /**
+     * Shows a long time {@link Toast}
+     * 
+     * @param context
+     * @param message
+     */
+    public static void showLongTimeToast(Context context, String message) {
+        showToast(context, message, Toast.LENGTH_LONG);
+    }
 }

@@ -15,56 +15,60 @@
 
     You should have received a copy of the GNU General Public License
     along with CheckYourItems.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.comunes.checkyouritems.application;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import android.content.Context;
 import android.graphics.Typeface;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 
  * @author Cesar Valiente Gordo
  * @mail cesar.valiente@gmail.com
  * 
- * This class loads all the resources we need to use in the app
+ *       This class loads all resources we need to use in the app
  */
 public class ResourceManager {
-	
-	private final String CLASS_NAME = getClass().getName();
-	
-	private final Map<String, Typeface> fonts;
-	private final Context context;
-	
-	/**
-	 * Contrutctor
-	 * @param context
-	 */
-	public ResourceManager (final Context context) {
-		this.context = context;
-		fonts = new HashMap<String, Typeface>();
-	}
-	
-	/**
-	 * Load a font from disk and insert it in the Map fonts.
-	 * @param fontFileName
-	 */
-	public void loadFont (final String fontFileName) {
-		final Typeface typeface = Typeface.createFromAsset(context.getAssets(), fontFileName);
-		if (!fonts.containsKey(fontFileName))
-			fonts.put(fontFileName, typeface);
-	}
-	
-	/**
-	 * Gets the font specfified
-	 * @param fontFileName
-	 * @return
-	 */
-	public Typeface getFont (final String fontFileName) {
-		return fonts.get(fontFileName);
-	}
+
+    private final String CLASS_NAME = getClass().getName();
+
+    private final Map<String, Typeface> mFonts;
+    private final Context mContext;
+
+    /**
+     * Contrutctor
+     * 
+     * @param context
+     */
+    public ResourceManager(final Context context) {
+        mContext = context;
+        mFonts = new HashMap<String, Typeface>();
+    }
+
+    /**
+     * Load a font from disk and insert it in the Map fonts.
+     * 
+     * @param fontFileName
+     */
+    public void loadFont(final String fontFileName) {
+        final Typeface typeface = Typeface.createFromAsset(mContext.getAssets(), fontFileName);
+        if (!mFonts.containsKey(fontFileName)) {
+            mFonts.put(fontFileName, typeface);
+        }
+    }
+
+    /**
+     * Gets the font specfified
+     * 
+     * @param fontFileName
+     * @return
+     */
+    public Typeface getFont(final String fontFileName) {
+        return mFonts.get(fontFileName);
+    }
 
 }

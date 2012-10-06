@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!--  
+<!--
         Copyright 2012 Cesar Valiente Gordo & Comunes Collective
  
         This file is part of CheckYourItems.
@@ -19,92 +18,100 @@
     along with CheckYourItems.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
-
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/dashboard_layout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="@drawable/background" >    
- 
-     <TableLayout 
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <TableLayout
         android:id="@+id/dashboard_table"
-        android:layout_width="fill_parent" 
-        android:layout_height="fill_parent"         
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:paddingTop="@dimen/dashboard_table_padding_top"
-        android:stretchColumns="*" >        
+        android:stretchColumns="*" >
+
         <TableRow>
+
             <!-- Barcode scan -->
+
             <LinearLayout
                 android:id="@+id/scan_btn_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"                                                              
-                android:gravity="center_horizontal" >
-            	
-                <ImageButton 
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageButton
                     android:id="@+id/scan_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
                     android:padding="@dimen/dashboard_btn_padding"
-                    android:src="@drawable/xml_barcode_btn"
-                    android:background="@android:color/transparent"/>
-                
-                <org.comunes.checkyouritems.ui.components.fonts.UbuntuMedium 
+                    android:src="@drawable/xml_barcode_btn" />
+
+                <org.comunes.checkyouritems.ui.components.fonts.UbuntuMedium
+                    style="@style/dashboard_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dashboard_text_btn_margin_top"
-                    style="@style/dashboard_btn"
-                    android:text="@string/barcode"/>               
+                    android:text="@string/barcode" />
             </LinearLayout>
-            
+
             <!-- Search items -->
+
             <LinearLayout
                 android:id="@+id/search_items_btn_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"                         
-                android:gravity="center_horizontal" >            	
-                <ImageButton 
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageButton
                     android:id="@+id/search_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
                     android:padding="@dimen/dashboard_btn_padding"
-                    android:src="@drawable/xml_search_btn"
-                    android:background="@android:color/transparent"/>
-                <org.comunes.checkyouritems.ui.components.fonts.UbuntuMedium                  
+                    android:src="@drawable/xml_search_btn" />
+
+                <org.comunes.checkyouritems.ui.components.fonts.UbuntuMedium
+                    style="@style/dashboard_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dashboard_text_btn_margin_top"
-                    style="@style/dashboard_btn"
-                    android:text="@string/search"/>               
+                    android:text="@string/search" />
             </LinearLayout>
-        </TableRow>     
-        <TableRow
-            android:paddingTop="@dimen/dashboard_row_padding_top">
+        </TableRow>
+
+        <TableRow android:paddingTop="@dimen/dashboard_row_padding_top" >
+
             <!-- Bookmarks items -->
+
             <LinearLayout
                 android:id="@+id/bookmarks_btn_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"                          
-                android:gravity="center_horizontal" >            	
-                <ImageButton 
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageButton
                     android:id="@+id/bookmarks_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
                     android:padding="@dimen/dashboard_btn_padding"
-                    android:src="@drawable/xml_bookmarks_btn"
-                    android:background="@android:color/transparent"/>
-                <org.comunes.checkyouritems.ui.components.fonts.UbuntuMedium 
+                    android:src="@drawable/xml_bookmarks_btn" />
+
+                <org.comunes.checkyouritems.ui.components.fonts.UbuntuMedium
+                    style="@style/dashboard_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dashboard_text_btn_margin_top"
-                    style="@style/dashboard_btn"
-                    android:text="@string/bookmarks"/>               
-            </LinearLayout>           
-        </TableRow>                                      
+                    android:text="@string/bookmarks" />
+            </LinearLayout>
+        </TableRow>
     </TableLayout>
-    
 
 </FrameLayout>

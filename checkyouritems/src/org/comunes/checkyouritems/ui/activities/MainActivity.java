@@ -15,7 +15,7 @@
 
     You should have received a copy of the GNU General Public License
     along with CheckYourItems.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.comunes.checkyouritems.ui.activities;
 
@@ -29,24 +29,18 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
  * 
  * @author Cesar Valiente Gordo
  * @mail cesar.valiente@gmail.com
- *
- * This class is the main activity of CheckYourItems and is the started point
- * of the app.
+ * 
+ *       This class is the main activity of CheckYourItems and is the started point of the app.
  */
 public class MainActivity extends SherlockFragmentActivity {
-	
-	private final String CLASS_NAME = getClass().getName();
-	
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		
-		super.onCreate(savedInstanceState);
-		
-		setContentView(R.layout.main);
-	}
-	
-		
 
-	
-		
+    private final String CLASS_NAME = getClass().getName();
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+    }
+
 }

@@ -15,49 +15,49 @@
 
     You should have received a copy of the GNU General Public License
     along with CheckYourItems.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
+ */
 
 package org.comunes.checkyouritems.utils;
 
-
+import org.comunes.checkyouritems.application.Settings;
 
 /**
  * 
  * @author Cesar Valiente Gordo
  * @mail cesar.valiente@gmail.com
- *
- * This class is used to write in the standard output the different traces of
- * the application.
+ * 
+ *       This class is used to write in the standard output the different traces of the application.
  */
 public class Log {
-	
-	private static final boolean DEBUG = true;
-  
-	public static void v(String className, String msg) {
-		if (DEBUG)
-		  	android.util.Log.v(className, msg);
-	}
-  
-	public static void d(String className, String msg) {
-		if (DEBUG)
-		  	android.util.Log.d(className, msg);
-	}
-  
-	public static void i(String className, String msg) {
-		if (DEBUG)
-		  	android.util.Log.i(className, msg);
-	}
-  
-	public static void w(String className, String msg) {
-		if (DEBUG)
-		  	android.util.Log.w(className, msg);
-	}
 
-	public static void e(String className, String msg) {
-		if (DEBUG)
-			android.util.Log.e(className, msg);
-	}
-  
-  
+    public static void v(String className, String msg) {
+        if (Settings.Development.DEBUG) {
+            android.util.Log.v(className, msg);
+        }
+    }
+
+    public static void d(String className, String msg) {
+        if (Settings.Development.DEBUG) {
+            android.util.Log.d(className, msg);
+        }
+    }
+
+    public static void i(String className, String msg) {
+        if (Settings.Development.DEBUG) {
+            android.util.Log.i(className, msg);
+        }
+    }
+
+    public static void w(String className, String msg) {
+        if (Settings.Development.DEBUG) {
+            android.util.Log.w(className, msg);
+        }
+    }
+
+    public static void e(String className, String msg) {
+        if (Settings.Development.DEBUG) {
+            android.util.Log.e(className, msg);
+        }
+    }
+
 }

@@ -15,7 +15,7 @@
 
     You should have received a copy of the GNU General Public License
     along with CheckYourItems.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.comunes.checkyouritems.ui.components.fonts;
 
@@ -31,50 +31,50 @@ import android.widget.TextView;
  * @author Cesar Valiente Gordo
  * @mail cesar.valiente@gmail.com
  * 
- * Sets the specified font to use in this class
- *
+ *       Sets the specified font to use in this class
+ * 
  */
 public class UbuntuBold extends TextView {
 
-	/**
-	 * Constructor
-	 * @param context
-	 */
-	public UbuntuBold (Context context) {
-		super(context);
-		setFont();
-	}
-	
-	/**
-	 * Constructor
-	 * @param context
-	 * @param attrs
-	 */
-	public UbuntuBold (final Context context, final AttributeSet attrs) {		
-		super(context, attrs);
-		setFont();
-	}
-	
-	/**
-	 * Constructor
-	 * @param context
-	 * @param attrs
-	 * @param defStyle
-	 */
-	public UbuntuBold (
-			final Context context, 
-			final AttributeSet attrs, 
-			final int defStyle) {
-		
-		super(context, attrs, defStyle);
-		setFont();
-	}
-	
-	/**
-	 * Sets the appropriated font
-	 */
-	public void setFont () {
-		setTypeface(ClassWiring.getResourceManager().getFont(Settings.Ui.UBUNTU_BOLD_FONT));		
-	}
+    /**
+     * Constructor
+     * 
+     * @param context
+     */
+    public UbuntuBold(Context context) {
+        super(context);
+        setFont();
+    }
+
+    /**
+     * Constructor
+     * 
+     * @param context
+     * @param attrs
+     */
+    public UbuntuBold(final Context context, final AttributeSet attrs) {
+        super(context, attrs);
+        setFont();
+    }
+
+    /**
+     * Constructor
+     * 
+     * @param context
+     * @param attrs
+     * @param defStyle
+     */
+    public UbuntuBold(final Context context, final AttributeSet attrs, final int defStyle) {
+
+        super(context, attrs, defStyle);
+        setFont();
+    }
+
+    /**
+     * Sets the appropriated font
+     */
+    public void setFont() {
+        setTypeface(ClassWiring.getResourceManager().getFont(Settings.Ui.UBUNTU_BOLD_FONT));
+    }
 
 }

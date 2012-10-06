@@ -15,55 +15,56 @@
 
     You should have received a copy of the GNU General Public License
     along with CheckYourItems.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.comunes.checkyouritems.application;
 
-import org.comunes.checkyouritems.components.animation.AnimationManager;
-
+import org.comunes.checkyouritems.managers.AnimationManager;
 
 /**
  * 
  * @author Cesar Valiente Gordo
  * @mail cesar.valiente@gmail.com
  * 
- * This class is used to instantiate the objects used along all the app following
- * the singleton design pattern.
- *
+ *       This class is used to instantiate the objects used along all the app following the singleton design
+ *       pattern.
+ * 
  */
 public class ClassWiring {
-	
-	private static final String CLASS_NAME = ClassWiring.class.getName();	
-	
-	private static ResourceManager resourceManager;
-	private static AnimationManager animationManager;
-	
-	
-	/**
-	 * Gets the ResourceManager used in the app
-	 * @return
-	 * @see {@link ResourceManager}
-	 */
-	public static ResourceManager getResourceManager () {
-		
-		if (resourceManager == null) 
-			resourceManager = new ResourceManager(CheckYourItemsApp.getContext());
-		
-		return resourceManager;
-	}
-	
-	/**
-	 * Gets the AnimationController used in the app
-	 * @return
-	 * @see {@link AnimationManager}
-	 */
-	public static AnimationManager getAnimationManager () {
-		
-		if (animationManager == null) 
-			animationManager = new AnimationManager(CheckYourItemsApp.getContext());
-		
-		return animationManager;		
-	}
-	
+
+    private final String CLASS_NAME = ClassWiring.class.getName();
+
+    private static ResourceManager sResourceManager;
+    private static AnimationManager sAnimationManager;
+
+    /**
+     * Gets the ResourceManager used in the app
+     * 
+     * @return
+     * @see {@link ResourceManager}
+     */
+    public static ResourceManager getResourceManager() {
+
+        if (sResourceManager == null) {
+            sResourceManager = new ResourceManager(CheckYourItemsApp.getContext());
+        }
+
+        return sResourceManager;
+    }
+
+    /**
+     * Gets the AnimationController used in the app
+     * 
+     * @return
+     * @see {@link AnimationManager}
+     */
+    public static AnimationManager getAnimationManager() {
+
+        if (sAnimationManager == null) {
+            sAnimationManager = new AnimationManager(CheckYourItemsApp.getContext());
+        }
+
+        return sAnimationManager;
+    }
 
 }
