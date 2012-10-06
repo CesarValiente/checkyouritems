@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--  
+       	Copyright 2012 Cesar Valiente Gordo & Comunes Collective
+ 
+        This file is part of CheckYourItems.
+
+    CheckYourItems is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    QuiteSleep is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with CheckYourItems.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    
+    <!-- General activity style -->
+    <style name="background_activity">
+        <item name="android:background">@drawable/background</item>
+    </style>
+	
+    <style name="splash_screen_style" parent="@android:style/TextAppearance.Large">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/splash_text_size</item>
+        <item name="android:shadowColor">@color/transparentGrey</item> 
+        <item name="android:shadowDx">3</item>
+        <item name="android:shadowDy">-3</item>
+        <item name="android:shadowRadius">1.5</item>                
+	</style>
+    
+    <!-- Action bar general style (background and size) -->
+    <style name="action_bar">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">@dimen/action_bar_height</item>
+	</style>
+	
+    <!-- Action bar title style -->
+	<style name="action_bar_title" parent="@android:style/TextAppearance.Large">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">@dimen/action_bar_title_size</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:paddingLeft">@dimen/action_bar_title_padding_left</item>
+		<item name="android:paddingTop">@dimen/action_bar_title_padding_top</item>
+		<item name="android:ellipsize">marquee</item>		
+	</style>				    		 
+	
+    <!-- Action bar button style -->
+	<style name="action_bar_button" >
+		<item name="android:layout_width">@dimen/action_bar_button_width</item>
+		<item name="android:layout_height">@dimen/action_bar_button_height</item>		
+		<item name="android:background">@drawable/xml_action_bar_btn</item>
+		<item name="android:visibility">gone</item>
+	</style>
+	
+	<!-- Action bar progress bar style -->
+	<style name="action_bar_progressbar">
+		<item name="android:layout_width">@dimen/action_bar_progressbar_width</item>
+		<item name="android:layout_height">@dimen/action_bar_progressbar_height</item>
+		<item name="android:padding">@dimen/action_bar_progressbar_padding</item>
+		<item name="android:visibility">gone</item>
+	</style>		
+	
+	<!-- Dashboard buttons style-->
+	<style name="dashboard_btn">	    
+	    <item name="android:textColor">@color/black</item>
+	    <item name="android:textStyle">bold</item>	   
+	</style>
+
+</resources>

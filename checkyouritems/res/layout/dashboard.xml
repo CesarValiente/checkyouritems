@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--  
+        Copyright 2012 Cesar Valiente Gordo & Comunes Collective
+ 
+        This file is part of CheckYourItems.
+
+    CheckYourItems is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    QuiteSleep is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with CheckYourItems.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dashboard_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background" >    
+ 
+     <TableLayout 
+        android:id="@+id/dashboard_table"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"         
+        android:paddingTop="@dimen/dashboard_table_padding_top"
+        android:stretchColumns="*" >        
+        <TableRow>
+            <!-- Barcode scan -->
+            <LinearLayout
+                android:id="@+id/scan_btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"                                                              
+                android:gravity="center_horizontal" >
+            	
+                <ImageButton 
+                    android:id="@+id/scan_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dashboard_btn_padding"
+                    android:src="@drawable/xml_barcode_btn"
+                    android:background="@android:color/transparent"/>
+                
+                <org.comunes.checkyouritems.ui.components.fonts.UbuntuMedium 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dashboard_text_btn_margin_top"
+                    style="@style/dashboard_btn"
+                    android:text="@string/barcode"/>               
+            </LinearLayout>
+            
+            <!-- Search items -->
+            <LinearLayout
+                android:id="@+id/search_items_btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"                         
+                android:gravity="center_horizontal" >            	
+                <ImageButton 
+                    android:id="@+id/search_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dashboard_btn_padding"
+                    android:src="@drawable/xml_search_btn"
+                    android:background="@android:color/transparent"/>
+                <org.comunes.checkyouritems.ui.components.fonts.UbuntuMedium                  
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dashboard_text_btn_margin_top"
+                    style="@style/dashboard_btn"
+                    android:text="@string/search"/>               
+            </LinearLayout>
+        </TableRow>     
+        <TableRow
+            android:paddingTop="@dimen/dashboard_row_padding_top">
+            <!-- Bookmarks items -->
+            <LinearLayout
+                android:id="@+id/bookmarks_btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"                          
+                android:gravity="center_horizontal" >            	
+                <ImageButton 
+                    android:id="@+id/bookmarks_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dashboard_btn_padding"
+                    android:src="@drawable/xml_bookmarks_btn"
+                    android:background="@android:color/transparent"/>
+                <org.comunes.checkyouritems.ui.components.fonts.UbuntuMedium 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dashboard_text_btn_margin_top"
+                    style="@style/dashboard_btn"
+                    android:text="@string/bookmarks"/>               
+            </LinearLayout>           
+        </TableRow>                                      
+    </TableLayout>
+    
+
+</FrameLayout>
