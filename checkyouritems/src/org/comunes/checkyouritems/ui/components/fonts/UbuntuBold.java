@@ -64,7 +64,8 @@ public class UbuntuBold extends TextView {
      * @param attrs
      * @param defStyle
      */
-    public UbuntuBold(final Context context, final AttributeSet attrs, final int defStyle) {
+    public UbuntuBold(final Context context, final AttributeSet attrs,
+            final int defStyle) {
 
         super(context, attrs, defStyle);
         setFont();
@@ -74,7 +75,8 @@ public class UbuntuBold extends TextView {
      * Sets the appropriated font
      */
     public void setFont() {
-        setTypeface(ClassWiring.getResourceManager().getFont(Settings.Ui.UBUNTU_BOLD_FONT));
+        setTypeface(ClassWiring.getResourceManager().getFont(
+                Settings.Ui.UBUNTU_BOLD_FONT));
     }
 
 }

@@ -32,8 +32,9 @@ import android.view.animation.AnimationUtils;
  * @author Cesar Valiente Gordo
  * @mail cesar.valiente@gmail.com
  * 
- *       This class is used as animation controller to performs all animation stuff in the application. It has to be
- *       used through the ClassWiring manager to use in standalone mode
+ *       This class is used as animation controller to performs all animation
+ *       stuff in the application. It has to be used through the ClassWiring
+ *       manager to use in standalone mode
  */
 public class AnimationManager {
 
@@ -49,8 +50,8 @@ public class AnimationManager {
     }
 
     /**
-     * FadeIn the passed view {@see View}, using the listener {@see AnimationListener} as the listener to announce
-     * the different events
+     * FadeIn the passed view {@see View}, using the listener {@see
+     * AnimationListener} as the listener to announce the different events
      * 
      * @param view
      * @param listener
@@ -61,8 +62,8 @@ public class AnimationManager {
     }
 
     /**
-     * FadeOut the passed view {@see View}, using the listener {@see AnimationListener} as the listener to announce
-     * the different events
+     * FadeOut the passed view {@see View}, using the listener {@see
+     * AnimationListener} as the listener to announce the different events
      * 
      * @param view
      * @param listener
@@ -73,16 +74,19 @@ public class AnimationManager {
     }
 
     /**
-     * Performs an standard view animation using the view passed. If we have a listener, then we use, and finally
-     * the animationType which is a resource to the different animation types.
+     * Performs an standard view animation using the view passed. If we have a
+     * listener, then we use, and finally the animationType which is a resource
+     * to the different animation types.
      * 
      * @param view
      * @param listener
      * @param animationType
      */
-    private void standardAnimation(View view, AnimationListener listener, int animationType) {
+    private void standardAnimation(View view, AnimationListener listener,
+            int animationType) {
 
-        Animation animation = AnimationUtils.loadAnimation(mContext, animationType);
+        Animation animation = AnimationUtils.loadAnimation(mContext,
+                animationType);
         if (listener != null) {
             animation.setAnimationListener(listener);
         }

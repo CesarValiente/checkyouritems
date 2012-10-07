@@ -55,7 +55,8 @@ public class ResourceManager {
      * @param fontFileName
      */
     public void loadFont(final String fontFileName) {
-        final Typeface typeface = Typeface.createFromAsset(mContext.getAssets(), fontFileName);
+        final Typeface typeface = Typeface.createFromAsset(
+                mContext.getAssets(), fontFileName);
         if (!mFonts.containsKey(fontFileName)) {
             mFonts.put(fontFileName, typeface);
         }

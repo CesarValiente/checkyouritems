@@ -64,7 +64,8 @@ public class UbuntuMedium extends TextView {
      * @param attrs
      * @param defStyle
      */
-    public UbuntuMedium(final Context context, final AttributeSet attrs, final int defStyle) {
+    public UbuntuMedium(final Context context, final AttributeSet attrs,
+            final int defStyle) {
 
         super(context, attrs, defStyle);
         setFont();
@@ -74,7 +75,8 @@ public class UbuntuMedium extends TextView {
      * Sets the appropriated font
      */
     public void setFont() {
-        setTypeface(ClassWiring.getResourceManager().getFont(Settings.Ui.UBUNTU_MEDIUM_FONT));
+        setTypeface(ClassWiring.getResourceManager().getFont(
+                Settings.Ui.UBUNTU_MEDIUM_FONT));
     }
 
 }

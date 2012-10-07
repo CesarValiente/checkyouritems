@@ -21,10 +21,12 @@ import com.google.zxing.integration.android.IntentResult;
  * 
  * @author Cesar Valiente Gordo (cesar.valiente@gmail.com
  * 
- *         This class has the different elements and functionality regarding the Dashboard of the application
+ *         This class has the different elements and functionality regarding the
+ *         Dashboard of the application
  * 
  */
-public class DashboardFragment extends SherlockFragment implements OnClickListener {
+public class DashboardFragment extends SherlockFragment implements
+        OnClickListener {
 
     private final String CLASS_NAME = getClass().getName();
 
@@ -48,7 +50,8 @@ public class DashboardFragment extends SherlockFragment implements OnClickListen
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
         return inflater.inflate(R.layout.dashboard, container, false);
     }
 
@@ -63,7 +66,8 @@ public class DashboardFragment extends SherlockFragment implements OnClickListen
         int viewId = v.getId();
         switch (viewId) {
         case R.id.scan_btn:
-            IntentIntegrator intent = new IntentIntegrator(getSherlockActivity());
+            IntentIntegrator intent = new IntentIntegrator(
+                    getSherlockActivity());
             intent.initiateScan();
             break;
         case R.id.search_btn:
@@ -76,7 +80,8 @@ public class DashboardFragment extends SherlockFragment implements OnClickListen
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         Log.d(CLASS_NAME, "onActivityResult");
-        IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+        IntentResult scanResult = IntentIntegrator.parseActivityResult(
+                requestCode, resultCode, intent);
         if (scanResult != null) {
             ;
         }

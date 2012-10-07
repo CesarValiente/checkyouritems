@@ -26,7 +26,8 @@ import org.comunes.checkyouritems.application.Settings;
  * @author Cesar Valiente Gordo
  * @mail cesar.valiente@gmail.com
  * 
- *       This class is used to write in the standard output the different traces of the application.
+ *       This class is used to write in the standard output the different traces
+ *       of the application.
  */
 public class Log {
 

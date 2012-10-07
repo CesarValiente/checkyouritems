@@ -23,7 +23,8 @@ package org.comunes.checkyouritems.application;
  * 
  * @author Cesar Valiente Gordo (cesar.valiente@gmail.com)
  * 
- *         This class is used to use different constant values along all the app.
+ *         This class is used to use different constant values along all the
+ *         app.
  */
 public class Settings {
 
@@ -42,7 +43,8 @@ public class Settings {
      * 
      * @author Cesar Valiente Gordo (cesar.valiente@gmail.com)
      * 
-     *         This class is used to specify the different final names of the ui components
+     *         This class is used to specify the different final names of the ui
+     *         components
      */
     public class Ui {
 

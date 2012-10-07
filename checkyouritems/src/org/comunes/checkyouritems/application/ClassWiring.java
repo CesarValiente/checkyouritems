@@ -26,8 +26,8 @@ import org.comunes.checkyouritems.managers.AnimationManager;
  * @author Cesar Valiente Gordo
  * @mail cesar.valiente@gmail.com
  * 
- *       This class is used to instantiate the objects used along all the app following the singleton design
- *       pattern.
+ *       This class is used to instantiate the objects used along all the app
+ *       following the singleton design pattern.
  * 
  */
 public class ClassWiring {
@@ -46,7 +46,8 @@ public class ClassWiring {
     public static ResourceManager getResourceManager() {
 
         if (sResourceManager == null) {
-            sResourceManager = new ResourceManager(CheckYourItemsApp.getContext());
+            sResourceManager = new ResourceManager(
+                    CheckYourItemsApp.getContext());
         }
 
         return sResourceManager;
@@ -61,7 +62,8 @@ public class ClassWiring {
     public static AnimationManager getAnimationManager() {
 
         if (sAnimationManager == null) {
-            sAnimationManager = new AnimationManager(CheckYourItemsApp.getContext());
+            sAnimationManager = new AnimationManager(
+                    CheckYourItemsApp.getContext());
         }
 
         return sAnimationManager;

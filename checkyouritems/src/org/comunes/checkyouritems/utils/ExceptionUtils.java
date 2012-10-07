@@ -43,7 +43,8 @@ public class ExceptionUtils {
             String completeTrace = "";
             for (StackTraceElement element : stackTrace) {
                 if (completeTrace.equals("")) {
-                    completeTrace = exceptionString + "\n\t" + element.toString() + "\n";
+                    completeTrace = exceptionString + "\n\t"
+                            + element.toString() + "\n";
                 } else {
                     completeTrace = completeTrace + "\t" + element + "\n";
                 }

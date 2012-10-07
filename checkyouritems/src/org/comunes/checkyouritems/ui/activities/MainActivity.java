@@ -30,7 +30,8 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
  * @author Cesar Valiente Gordo
  * @mail cesar.valiente@gmail.com
  * 
- *       This class is the main activity of CheckYourItems and is the started point of the app.
+ *       This class is the main activity of CheckYourItems and is the started
+ *       point of the app.
  */
 public class MainActivity extends SherlockFragmentActivity {
 

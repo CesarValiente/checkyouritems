@@ -38,8 +38,8 @@ import android.widget.TextView;
  * @author Cesar Valiente Gordo
  * @mail cesar.valiente@gmail.com
  * 
- *       This class is used to show the splash screen the first time we start the app while in the background we
- *       perform other operations
+ *       This class is used to show the splash screen the first time we start
+ *       the app while in the background we perform other operations
  */
 public class SplashScreenActivity extends Activity {
 
@@ -136,7 +136,8 @@ public class SplashScreenActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(),
+                        MainActivity.class);
                 startActivity(intent);
             }
         }, 1000);

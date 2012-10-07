@@ -31,8 +31,8 @@ import android.net.NetworkInfo;
  * @author Cesar Valiente Gordo
  * @mail cesar.valiente@gordo
  * 
- *       This class is used to get the application context whenever we want and also to get different data we need
- *       along all the application use.
+ *       This class is used to get the application context whenever we want and
+ *       also to get different data we need along all the application use.
  * 
  */
 public class CheckYourItemsApp extends Application {
@@ -48,7 +48,8 @@ public class CheckYourItemsApp extends Application {
         sContext = getApplicationContext();
 
         // Loads the different fonts
-        final ResourceManager resourceManager = ClassWiring.getResourceManager();
+        final ResourceManager resourceManager = ClassWiring
+                .getResourceManager();
         resourceManager.loadFont(Settings.Ui.UBUNTU_MEDIUM_FONT);
         resourceManager.loadFont(Settings.Ui.UBUNTU_BOLD_FONT);
     }
@@ -70,8 +71,10 @@ public class CheckYourItemsApp extends Application {
     public static boolean hasInternetConnection() {
         final ConnectivityManager connectivityManager = (ConnectivityManager) sContext
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
-        final NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-        if (networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected()) {
+        final NetworkInfo networkInfo = connectivityManager
+                .getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isAvailable()
+                && networkInfo.isConnected()) {
             return true;
         }
 
@@ -84,22 +87,26 @@ public class CheckYourItemsApp extends Application {
      * @return
      */
     public static boolean hasSDCardMounted() {
-        return (android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED));
+        return (android.os.Environment.getExternalStorageState()
+                .equals(android.os.Environment.MEDIA_MOUNTED));
     }
 
     /**
      * @return true if and only if this is the first time the app runs
      */
     public boolean isFirstRun() {
-        final SharedPreferences prefs = getSharedPreferences(Settings.Preferences.PREFS_NAME, MODE_PRIVATE);
+        final SharedPreferences prefs = getSharedPreferences(
+                Settings.Preferences.PREFS_NAME, MODE_PRIVATE);
         return prefs.getBoolean(Settings.Preferences.PREFS_FIRST_RUN_KEY, true);
     }
 
     /**
-     * store a boolean in the shared preferences so we know the next runs are not the first
+     * store a boolean in the shared preferences so we know the next runs are
+     * not the first
      */
     public void setFirstRun() {
-        final Editor editor = getSharedPreferences(Settings.Preferences.PREFS_NAME, MODE_PRIVATE).edit();
+        final Editor editor = getSharedPreferences(
+                Settings.Preferences.PREFS_NAME, MODE_PRIVATE).edit();
         editor.putBoolean(Settings.Preferences.PREFS_FIRST_RUN_KEY, false);
     }
 }
