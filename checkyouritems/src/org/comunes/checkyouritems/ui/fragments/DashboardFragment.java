@@ -34,12 +34,12 @@ public class DashboardFragment extends SherlockFragment implements
     private ImageButton scanBtn, searchBtn, bookmarsBtn;
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
+    public void onActivityCreated(final Bundle savedInstanceState) {
 
         super.onActivityCreated(savedInstanceState);
         setHasOptionsMenu(true);
 
-        View view = getView();
+        final View view = getView();
         scanBtn = (ImageButton) view.findViewById(R.id.scan_btn);
         searchBtn = (ImageButton) view.findViewById(R.id.search_btn);
         bookmarsBtn = (ImageButton) view.findViewById(R.id.bookmarks_btn);
@@ -50,37 +50,36 @@ public class DashboardFragment extends SherlockFragment implements
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater,
+            final ViewGroup container, final Bundle savedInstanceState) {
         return inflater.inflate(R.layout.dashboard, container, false);
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+    public void onCreateOptionsMenu(final Menu menu, final MenuInflater inflater) {
         inflater.inflate(R.menu.menu, menu);
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(final View v) {
 
-        int viewId = v.getId();
-        switch (viewId) {
-        case R.id.scan_btn:
-            IntentIntegrator intent = new IntentIntegrator(
+        final int viewId = v.getId();
+        if (viewId == R.id.scan_btn) {
+            final IntentIntegrator intent = new IntentIntegrator(
                     getSherlockActivity());
             intent.initiateScan();
-            break;
-        case R.id.search_btn:
-            break;
-        case R.id.bookmarks_btn:
-            break;
+        } else if (viewId == R.id.search_btn) {
+
+        } else if (viewId == R.id.bookmarks_btn) {
         }
+
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+    public void onActivityResult(final int requestCode, final int resultCode,
+            final Intent intent) {
         Log.d(CLASS_NAME, "onActivityResult");
-        IntentResult scanResult = IntentIntegrator.parseActivityResult(
+        final IntentResult scanResult = IntentIntegrator.parseActivityResult(
                 requestCode, resultCode, intent);
         if (scanResult != null) {
             ;
